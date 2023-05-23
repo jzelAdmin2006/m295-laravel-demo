@@ -21,3 +21,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get("/aufgabe-1", function () {
     return "Aufgabe 1";
 });
+
+Route::prefix("/aufgabe-2")->group(function () {
+    Route::get("/a", function () {
+        return "Aufgabe 2a";
+    });
+    Route::get("/b", function () {
+        return "Aufgabe 2b";
+    });
+    Route::get("/c", function () {
+        return "Aufgabe 2c";
+    });
+});
