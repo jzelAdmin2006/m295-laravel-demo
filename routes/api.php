@@ -19,7 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get("/aufgabe-1", function () {
-    return "Aufgabe 1";
+    $data = ["Produkt 1", "Produkt 2", "Produkt 3"];
+    return $data;
 });
 
 Route::prefix("/aufgabe-2")->group(function () {
