@@ -34,3 +34,7 @@ Route::prefix("/aufgabe-2")->group(function () {
         return "Aufgabe 2c";
     });
 });
+
+Route::get("/hello/{name}", function ($name) {
+    return "Hello " . $name;
+});
